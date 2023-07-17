@@ -67,7 +67,7 @@ else:
             else:
              print(f'Operação Invalida')
 
-             # loop saque
+             # saque
 
         elif opcao == "s":
             print('Realizando Operação....')
@@ -78,6 +78,7 @@ else:
             excedeu_limite = valor > limite
             excedeu_saques = numero_saque == limite_saque 
 
+            # Regras de saque
             if excedeu_saldo:
              print('Realizando Operação....')
              time.sleep(2)
@@ -93,6 +94,8 @@ else:
                time.sleep(2)
                print('Falha na Operação***Operação excedeu o limite de *** 3 saques Diarios')
 
+
+               # Finalizando saque 
             elif valor > 0:
                print('Realizando Operação....')
                time.sleep(2)
@@ -103,12 +106,17 @@ else:
 
             else:
                print('Falha na operação***Tente de Novo')   
+           
+           # Extrato 
 
         elif  opcao == "e": 
             print('Realizando Operação....')
             time.sleep(2)
             print(f'''Saldo total em conta: **R${saldo:.2f}**\n\nLimite de **R$ {limite}** por saque\n\nLimite de ** 3 ** saques diarios disponiveis\n\nSaques realizados **{numero_saque}** de 3 Disponiveis ''') 
+          
 
+
+          # finalizando sistema (Sair do sistema)
         elif opcao == "q":
          print('***Realizando Operação***')
          time.sleep(2)
